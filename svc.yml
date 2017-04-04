@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.AppName}}
+  namespace: {{.NameSpace}}
+spec:
+  type: NodePort
+  ports:
+    - port: 8000
+      targetPort: 8000
+      name: http
+      nodePort: 50047
+    - port: 8001
+      targetPort: 8001
+      name: admin
+      nodePort: 50046
+  selector:
+    name: {{.AppName}}
+    app: {{.AppName}}
