@@ -48,8 +48,8 @@ func writeToYaml (tmplFilename string, values Config) {
 }
 
 func main() {
-    valuesYamlfile := flag.String("values", "values.yaml", "values yaml file name")
-    tmplFile := flag.String("tmplfile", "svc.yaml", "Template yaml file name")
+    valuesYamlfile := flag.String("values", "values.yml", "values yaml file name")
+    tmplFile := flag.String("tmplfile", "svc.yml", "Template yaml file name")
     flag.Parse()
     fmt.Println(*valuesYamlfile)
     fmt.Println(*tmplFile)
